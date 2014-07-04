@@ -24,13 +24,21 @@
         * 設定電腦名稱為 `<yourHostname>.com`
         * 更新主機名稱（要設定成 `<yourHostname>.com` 的話要注意 DNS 反解必須一致，否則使用建議選項即可）
     * 設定
-        * ✔ 允許使用 SSH 從遠端登
+        * ✔ 允許使用 SSH 從遠端登入
         * ✔ 啟用螢幕共享與遠端管理
         * ✔ 啟用 Apple 推播通知
         * （反正全部 ✔ …）
     * 其他服務與進階設定可以等安裝完再依需求設定
 
-* 將其他工作電腦的 rsa pub key 加入 `~/.ssh/authorized_keys`
+* 生成 rsa key 與 authorized_keys
+
+````
+$ ssh-keygen -t rsa
+$ touch \~/.ssh/authorized_keys
+````
+
+* 將其他工作電腦的 `id_rsa.pub` 內容寫入 `~/.ssh/authorized_keys`
+* 將 Server 的 `id_rsa.pub` 內容加入 Github, bitbucket 等 project Deploy Key
 * 編輯 `/etc/sshd_config`，設定下述項目，讓主機僅允許使用 pubkey ssh 登入
 
 ````sshd_config
@@ -168,8 +176,8 @@ LoadModule passenger_module /Users/[YourUserName]/.rvm/gems/ruby-2.0.0-p481/gems
 
 ### Reference
 
-   * https://github.com/rocodev/guides/wiki/setup-mac-development
-   * http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer
+   1. https://github.com/rocodev/guides/wiki
+   2. http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer
 
 [1]:    https://itunes.apple.com/tw/app/os-x-server/id714547929?l=zh&mt=12
 [2]:    https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&mt=12
