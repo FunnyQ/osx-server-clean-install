@@ -124,8 +124,8 @@ $ source ~/.profile
 ````
 $ brew install libyaml
 $ rvm pkg install openssl
-$ rvm install 2.0.0 \\
---with-openssl-dir=$HOME/.rvm/usr \\
+$ rvm install 2.0.0 \
+--with-openssl-dir=$HOME/.rvm/usr \
 --verify-downloads 1
 $ rvm use 2.0.0
 ````
