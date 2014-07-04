@@ -145,6 +145,25 @@ $ xcode-select --install #這個不安裝下面 compile 會噴 error
 $ passenger-install-apache2-module
 ````
 
+* 設定 passenger
+
+````
+sudo touch /Library/Server/Web/Config/apache2/other/passenger.conf
+````
+
+在 `passenger.conf` 裡加入安裝 apache2-module 時提示你的設定，大致上會長得像下面這樣
+
+````
+LoadModule passenger_module /Users/[YourUserName]/.rvm/gems/ruby-2.0.0-p481/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so
+   <IfModule mod_passenger.c>
+     PassengerRoot /Users/[YourUserName]/.rvm/gems/ruby-2.0.0-p481/gems/passenger-4.0.45
+     PassengerDefaultRuby /Users/[YourUserName]/.rvm/gems/ruby-2.0.0-p481/wrappers/ruby
+   </IfModule>
+````
+
+* 重啟 Server
+* Done!
+
 [1]:    https://itunes.apple.com/tw/app/os-x-server/id714547929?l=zh&mt=12
 [2]:    https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&mt=12
 [3]:    https://www.dropbox.com/
