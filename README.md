@@ -15,7 +15,7 @@
 * 下載安裝 [Xcode.app][2]
 * 下載安裝 [Dropbox.app][3]
 
-## 環境設定
+## 基本環境設定
 
 * 先開啟一次 Xcode.app 並依照指示同意使用規範
 * 開啟 Server.app 並做基本設定
@@ -80,14 +80,15 @@ $ brew install z
 
 * 安裝 [zsh-syntax-highlighting][7]
 
-（最後記得要先把自己的 dotfiles 設定好，讓一切正常。例如`.zshrc`、`.gitconfig`、`.gitignore_global`等等）
-
-
 ````
 $ cd ~/.oh-my-zsh/custom/plugins
 $ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 $ cd ~
 ````
+
+（最後記得要先把自己的 dotfiles 設定好，讓一切正常。例如`.zshrc`、`.gitconfig`、`.gitignore_global`等等）
+
+## 建立可以運行 Ruby on Rails app 的環境
 
 * 安裝 [XQuartz][8]
 * 安裝完後先登出再重新登入系統
