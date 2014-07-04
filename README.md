@@ -34,7 +34,7 @@
 
 ````
 $ ssh-keygen -t rsa
-$ touch \~/.ssh/authorized_keys
+$ touch ~/.ssh/authorized_keys
 ````
 
 * 將其他工作電腦的 `id_rsa.pub` 內容寫入 `~/.ssh/authorized_keys`
