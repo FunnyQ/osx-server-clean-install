@@ -1,6 +1,6 @@
 # OSX server 10.9 重新安裝步驟記錄
 
-
+在 Mac Mini Server 或其它可運行 OSX 的伺服器上，可參考以下步驟來安裝 OSX Server 10.9。基本的 PHP、MySQL、Apache 以外，Ruby on Rails application 也可以 deploy 在安裝好的伺服器上運行（如 Redmine 或自行開發的 RoR 專案等）。並可透過 Apple 官方的 Server.app 來做大部分的伺服器管理與設定，沒有太大的問題。
 
 ## 重新安裝 Mac OSX
 
@@ -173,6 +173,10 @@ LoadModule passenger_module /Users/[YourUserName]/.rvm/gems/ruby-2.0.0-p481/gems
 * Done!
 
 ---- 
+
+完成後建議做個備份的映像檔，如果日後發生問題的話可以快速恢復基本的伺服器運作環境。
+
+----
 
 ### Reference
 
