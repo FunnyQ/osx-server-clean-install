@@ -51,7 +51,7 @@ ChallengeResponseAuthentication no
 
 ````install_homebrew
 $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-$ brew doctor #確認環境沒有問題
+$ brew doctor
 $ brew update
 ````
 
