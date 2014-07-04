@@ -11,7 +11,7 @@
 ## 到 Mac App Store 更新系統並下載重要軟體
 
 * 更新至最新版本的 OSX
- * 下載安裝 [Server.app][1]
+* 下載安裝 [Server.app][1]
 * 下載安裝 [Xcode.app][2]
 * 下載安裝 [Dropbox.app][3]
 
@@ -21,8 +21,8 @@
 * 開啟 Server.app 並做基本設定
 
     * 概觀
-        * 設定電腦名稱為 `<hostname>.com`
-        * 更新主機名稱（要設定成 `<hostname>.com` 的話要注意 DNS 反解必須一致，否則使用建議選項即可）
+        * 設定電腦名稱為 `<yourHostname>.com`
+        * 更新主機名稱（要設定成 `<yourHostname>.com` 的話要注意 DNS 反解必須一致，否則使用建議選項即可）
     * 設定
         * ✔ 允許使用 SSH 從遠端登
         * ✔ 啟用螢幕共享與遠端管理
@@ -78,8 +78,10 @@ $ curl -L http://install.ohmyz.sh | sh
 $ brew install z
 ````
 
-* （把自己的 dotfiles 設定好）
 * 安裝 [zsh-syntax-highlighting][7]
+
+（最後記得要先把自己的 dotfiles 設定好，讓一切正常。例如`.zshrc`、`.gitconfig`、`.gitignore_global`等等）
+
 
 ````
 $ cd ~/.oh-my-zsh/custom/plugins
