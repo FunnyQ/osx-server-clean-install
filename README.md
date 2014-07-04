@@ -1,4 +1,4 @@
-# Mac mini 安裝 osx server 10.9 步驟記錄
+# OSX server 10.9 重新安裝步驟記錄
 
 
 
@@ -148,7 +148,7 @@ $ passenger-install-apache2-module
 * 設定 passenger
 
 ````
-sudo touch /Library/Server/Web/Config/apache2/other/passenger.conf
+$ sudo touch /Library/Server/Web/Config/apache2/other/passenger.conf
 ````
 
 在 `passenger.conf` 裡加入安裝 apache2-module 時提示你的設定，大致上會長得像下面這樣
@@ -163,6 +163,13 @@ LoadModule passenger_module /Users/[YourUserName]/.rvm/gems/ruby-2.0.0-p481/gems
 
 * 重啟 Server
 * Done!
+
+---- 
+
+### Reference
+
+   * https://github.com/rocodev/guides/wiki/setup-mac-development
+   * http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer
 
 [1]:    https://itunes.apple.com/tw/app/os-x-server/id714547929?l=zh&mt=12
 [2]:    https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&mt=12
