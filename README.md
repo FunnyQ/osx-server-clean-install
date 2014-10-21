@@ -115,7 +115,12 @@ $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" 
 $ mysql.server start
 $ mysqladmin -u root password ‘\<yourPassword\>’
 $ mkdir -p ~/Library/LaunchAgents
-$ find /usr/local/Cellar/mysql/ -name "homebrew.mxcl.mysql.plist" -exec cp ~/Library/LaunchAgents/ ;
+
+# 10.10 Yosemite 用下面這個指令
+$ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
+
+# 10.9 以及更早的版本用下面這個指令
+# $ find /usr/local/Cellar/mysql/ -name "homebrew.mxcl.mysql.plist" -exec cp ~/Library/LaunchAgents/ ;
 $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 ````
 
@@ -132,10 +137,10 @@ $ source ~/.profile
 ````
 $ brew install libyaml
 $ rvm pkg install openssl
-$ rvm install 2.0.0 \
+$ rvm install 2.1.3 \
 --with-openssl-dir=$HOME/.rvm/usr \
 --verify-downloads 1
-$ rvm use 2.0.0
+$ rvm --default use 2.1.3
 ````
 
 * 安裝必要的 gems
