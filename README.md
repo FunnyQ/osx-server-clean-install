@@ -113,7 +113,7 @@ $ brew install mysql
 $ unset TMPDIR
 $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
 $ mysql.server start
-$ mysqladmin -u root password ‘\<yourPassword\>’
+$ mysql_secure_installation
 $ mkdir -p ~/Library/LaunchAgents
 
 # 10.10 Yosemite 用下面這個指令
