@@ -117,7 +117,7 @@ $ mysql_secure_installation
 $ mkdir -p ~/Library/LaunchAgents
 
 # 10.10 Yosemite 用下面這個指令
-$ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
+$ ln -sfv /usr/local/opt/mysql/*plist ~/Library/LaunchAgents
 
 # 10.9 以及更早的版本用下面這個指令
 # $ find /usr/local/Cellar/mysql/ -name "homebrew.mxcl.mysql.plist" -exec cp ~/Library/LaunchAgents/ ;
