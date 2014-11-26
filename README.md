@@ -137,10 +137,10 @@ $ source ~/.profile
 ````
 $ brew install libyaml
 $ rvm pkg install openssl
-$ rvm install 2.1.3 \
+$ rvm install 2.1.5 \
 --with-openssl-dir=$HOME/.rvm/usr \
 --verify-downloads 1
-$ rvm --default use 2.1.3
+$ rvm --default use 2.1.5
 ````
 
 * 安裝必要的 gems
